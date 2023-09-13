@@ -15,13 +15,13 @@ public class DAY2 {
         
          Set<String> dictionarySet = new HashSet<>(Arrays.asList(dictionary));
 
-        for (int i = 1; i <= s.length(); ++i) {
-            dp[i] = dp[i - 1] + 1;
-            for (int l = 1; l <= i; ++l) {
-                if (dictionarySet.contains(s.substring(i - l, i))) {
-                    dp[i] = Math.min(dp[i], dp[i - l]);
-                }
-            }
+        // for (int i = 1; i <= s.length(); ++i) {
+        //     dp[i] = dp[i - 1] + 1;
+        //     for (int l = 1; l <= i; ++l) {
+        //         if (dictionarySet.contains(s.substring(i - l, i))) {
+        //             dp[i] = Math.min(dp[i], dp[i - l]);
+        //         }
+        //     }
         }
         return dp[s.length()];
     }
